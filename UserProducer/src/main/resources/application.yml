@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-producer
+
+server:
+  port: 8072
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8084/eureka/
+  instance:
+    hostname: localhost

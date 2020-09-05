@@ -1,0 +1,27 @@
+server:
+  port: 8087
+  
+spring:
+  application:
+    name: user-gateway
+  
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8084/eureka/
+    
+zuul:
+  routes:
+    producer:
+     service-id: user-producer
+    consumer:
+     service-id: user-client
+    hystrix:
+     service-id: user-hystrix
+    
+#http://localhost:8088/producer/User
+    
+    
