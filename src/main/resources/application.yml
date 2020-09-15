@@ -1,0 +1,20 @@
+server:
+  port: 9094
+  
+spring:
+  application:
+    name: user-config-server
+    
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rahulrai1991/spring-cloud
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8084/eureka/
+      
